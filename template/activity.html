@@ -1,0 +1,42 @@
+{% include 'index.html' %}
+{% load static %}
+{% block content %}
+ 
+<h1 style="text-align: center;"><abbr title="HyperText Markup Language" class="initialism">User History</abbr></h1><br><br>
+    <form action="" method="post">
+
+        
+        
+        
+<div class="container">
+    <div class="col-6 offset-3"> 
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                
+                <td>s.no</td>
+                <td>First No</td>
+                <td>Second No</td>
+
+            </tr>
+        </thead>
+       <tbody>
+        <tr>{% for data in datas %}
+            <td>{{forloop.counter}}</td>
+            <td>{{data.number1}}</td>
+            <td>{{data.number2}}</td>
+        </tr>
+        
+       </tbody>
+   
+    {% endfor %}
+       </table>
+        
+        
+       </ul> 
+      
+    </table> 
+  
+
+
+{% endblock %}
